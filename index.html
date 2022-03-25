@@ -43,9 +43,7 @@
     </form>
     <script>
         const inputsAll = document.querySelectorAll('.js-input');
-    </script>
-
-
+    
         for (const input of inputsAll) {
             input.addEventListener('focus',(e)=>{
                 e.target.style.backgroundColor = "#ccc";
@@ -53,7 +51,7 @@
 
             input.addEventListener('blur', (event) => {
                 event.target.style.backgroundColor = '';
-});
+            });
         }
     </script>
 </body>
