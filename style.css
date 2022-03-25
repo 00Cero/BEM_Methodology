@@ -1,0 +1,132 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*===== Block =====*/
+.page{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /*===== Modifier =====*/
+    .page--style-fancy{
+        background: rgb(210,209,222);
+        background: linear-gradient(124deg, rgba(210,209,222,1) 0%, rgba(9,70,121,1) 100%); 
+    }
+
+/*===== Block =====*/
+.input{
+    padding: 0.25rem 0.5rem;
+    outline: none;
+    font-weight: lighter;
+    background-color: inherit;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+
+    /*===== Modifier of Block=====*/
+    .input--size-big{
+        line-height: 1.5rem;
+        font-size: 18px;
+    }
+
+/*===== Block =====*/
+.contact-form{
+    padding: 1rem 0.8rem;
+    font-family: Arial, sans-serif;
+    
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.4);
+}
+
+
+    /*===== Modifier of Block =====*/
+    .contact-form--theme-light{
+        background-color: #fff;
+    }
+
+
+    /*===== Modifier of Block =====*/
+    .contact-form--theme-dark{
+        background-color: #000;
+        color: #fff;
+        box-shadow: 0 0 20px 2px rgba(255,255,255,0.4);
+    }
+
+    /*===== Element =====*/
+    .contact-form__inner{
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: inherit;
+        
+    }
+
+
+        /*===== Modifier of Element =====*/
+        .contact-form__inner--style-wide{
+            width: 300px;
+        }
+
+/*===== Block =====*/
+.button-container{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+    /*===== Element =====*/
+    .button-container__btn{
+        border: 3px dotted #000;
+        border-radius: 10px;
+    }
+
+/*===== Block =====*/
+.btn{
+    padding: 0.25rem 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: inherit;
+    outline: none;
+    
+}
+
+
+    /*===== Modifier of Block=====*/
+    .btn--primary{
+        border-width: 2px;
+        border-style: solid;
+        border-color: #000;
+        background-color: rgb(53, 212, 101);
+    }
+
+
+/*===== Element under the Modifier of Block =====*/
+/* 
+** When the Block has this Modifier
+*           ↓
+** The Element has this styles
+*/
+.contact-form--theme-dark .contact-form__input{
+    border-color: #fff;
+}
+
+/*===== Element under the Modifier of Block =====*/
+/* 
+** When the Block has this Modifier
+*           ↓
+** The Element has this styles
+*/
+.contact-form--theme-dark .contact-form__btn{
+    border-color: #fff;
+    color: #fff;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="page page--style-fancy">
+    <!-- Se puede cambiar el contact-form--theme-dark a contact-form--theme-light  -->
+    <form class="contact-form contact-form--theme-dark" action="#">
+        <div class="contact-form__inner contact-form__inner--style-wide ">
+            <label for="" class="contact-form__label ">Nombre</label>
+            <!-- js-"name" only for JS Hook -->
+            <input type="text" class="input contact-form__input input--size-big js-input">
+        </div>
+        <div class="contact-form__inner contact-form__inner--style-wide">
+            <label for="" class="contact-form__label ">Mail</label>
+            <!-- js-"name" only for JS Hook -->
+            <input type="text" class="input contact-form__input input--size-big js-input">
+        </div>
+        <div class="contact-form__inner contact-form__inner--style-wide">
+            <label for="" class="contact-form__label">Mensaje</label>
+            <!-- js-"name" only for JS Hook -->
+            <textarea class="input contact-form__input input--size-big js-input" cols="0" rows="0"></textarea>
+        </div>
+        <div class="button-container">
+            <input type="button" class="btn contact-form__btn button-container__btn" value="Cancelar">
+            <input type="submit" class="btn contact-form__btn btn--primary" value="Enviar">
+            
+        </div>
+
+        <div class="monigote monigote--tamaño-grande"></div>
+
+        <form class="contact-form">
+            <input class="input contact-form__input js-input">
+            <input class="input contact-form__input js-input">
+            <input class="input contact-form__input js-input">
+        </form>
+
+
+    </form>
+    <script>
+        const inputsAll = document.querySelectorAll('.js-input');
+    </script>
+
+
+        for (const input of inputsAll) {
+            input.addEventListener('focus',(e)=>{
+                e.target.style.backgroundColor = "#ccc";
+            })
+
+            input.addEventListener('blur', (event) => {
+                event.target.style.backgroundColor = '';
+});
+        }
+    </script>
+</body>
+</html>
